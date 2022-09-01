@@ -41,17 +41,17 @@ class TestApi:
     def test_page_from_one_user(self):
         response = app.test_client().get('/users/1/')
         assert response.status_code == 200, 404
-        assert type(response.json) == dict, 'Это не список'
+        assert type(response.json) == dict, 'Это не словарь'
 
     def test_page_from_one_order(self):
         response = app.test_client().get('/orders/1/')
         assert response.status_code == 200, 404
-        assert type(response.json) == dict, 'Это не список'
+        assert type(response.json) == dict, 'Это не словарь'
 
     def test_page_from_one_offer(self):
         response = app.test_client().get('/offers/1/')
         assert response.status_code == 200, 404
-        assert type(response.json) == dict, 'Это не список'
+        assert type(response.json) == dict, 'Это не словарь'
 
     def test_not_found_page(self):
         response = app.test_client().get('/qwerty/')
