@@ -1,14 +1,4 @@
-from flask import Flask
-from flask_sqlalchemy import SQLAlchemy
-
-app = Flask(__name__)
-app.app_context().push()
-app.json.ensure_ascii = False
-app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///hw_16_bprint_db.db"
-app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
-app.config['JSONIFY_PRETTYPRINT_REGULAR'] = True
-
-db = SQLAlchemy(app)
+from global_variables import db
 
 
 class User(db.Model):

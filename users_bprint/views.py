@@ -1,6 +1,7 @@
 from flask import Blueprint, jsonify, request, abort
-from class_models_and_db.models import User, db
+from class_models_and_db.models import User
 from functions.utils import user_serialize
+from global_variables import db
 
 user_blueprint = Blueprint('user_blueprint', __name__)
 

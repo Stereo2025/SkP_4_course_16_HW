@@ -1,6 +1,7 @@
 from flask import Blueprint, jsonify, request, abort
-from class_models_and_db.models import Order, db
+from class_models_and_db.models import Order
 from functions.utils import order_serialize
+from global_variables import db
 
 order_blueprint = Blueprint('order_blueprint', __name__)
 
